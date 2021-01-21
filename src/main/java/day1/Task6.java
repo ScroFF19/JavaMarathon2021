@@ -9,6 +9,5 @@ public class Task6 {
             System.out.println(i + " x " + k + "= " + i*k);
             i++;
         }
-
     }
 }

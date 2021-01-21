@@ -7,6 +7,5 @@ public class Task4 {
             System.out.println("Олимпиада " + year + " года");
             year = year + 4;
         }
-
     }
 }
