@@ -13,26 +13,32 @@ public class Task1 {
             arry[i] = ran.nextInt(10);
         }
         int moreThanEight = 0;
-        int evenNumbers = 0;
-        int one = 0;
-        int notEvenNumbers = 0;
-        for(int i = 0; i < arry.length; i++){
-            if(arry[i] > 8){
+        for(int i = 0; i < arry.length; i++) {
+            if (arry[i] > 8) {
                 moreThanEight++;
-            }else if(arry[i] % 2 == 0 && arry[i] != 0){
-                evenNumbers++;
-            }else if(arry[i] == 1){
-                one++;
-            }else if(arry[i] % 2 != 0 && arry[i] != 0){
-                notEvenNumbers++;
             }
         }
-        int sum = 0;
-        for(int x:arry) {
-            sum = sum + x;
+        int evenNumbers = 0;
+        for(int i = 0; i < arry.length; i++) {
+            if (arry[i] % 2 == 0) {
+                evenNumbers++;
+            }
         }
-
-
+        int one = 0;
+        for(int i = 0; i < arry.length; i++) {
+            if (arry[i] == 1) {
+                one++;
+            }
+        }
+        int notEvenNumbers = 0;
+        for(int i = 0; i < arry.length; i++)
+            if (arry[i] % 2 != 0) {
+                notEvenNumbers++;
+            }
+        int sum = 0;
+        for(int i = 0; i < arry.length; i++) {
+            sum = sum + i;
+        }
         System.out.println("Длинна массива: " + arry.length);
         System.out.println("Количество чисел больше 8: " + moreThanEight);
         System.out.println("Количество чисел равных 1: " + one);
